@@ -42,7 +42,7 @@ class CalendersController < ApplicationController
     @calender_item = Calender.find(params[:id])
     @calender_item.destroy
     respond_to do |format|
-      format.html { redirect_to calenders_url, notice: 'Calender item was successfully destroyed.' }
+      format.html { redirect_to calenders_url, notice: 'Calender was successfully destroyed.' }
     end
   end
   
