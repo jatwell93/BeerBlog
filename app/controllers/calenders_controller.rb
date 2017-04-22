@@ -5,6 +5,7 @@ class CalendersController < ApplicationController
   
   def new
     @calender_item = Calender.new
+    3.times { @calender_item.technologies.build }
   end
   
   def create
@@ -49,6 +50,6 @@ class CalendersController < ApplicationController
   private 
     # Never trust parameters from the scary internet, only allow the white list through.
     def calender_params
-      params.require(:calender).permit(:title, :subtitle, :body)
+      params.require(:calender).permit(:title, :subtitle, :body, technologies_attributes: [:name])
     end  
 end

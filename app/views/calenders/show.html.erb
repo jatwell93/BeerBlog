@@ -5,3 +5,9 @@
 <em><%= @calender_item.subtitle %></em>
 
 <p><%= @calender_item.body %></p>
+
+<h2>Technologies Used:</h2>
+
+<% @calender_item.technologies.each do |t| %>
+<p> <%= t.name %> </p>
+<% end %>

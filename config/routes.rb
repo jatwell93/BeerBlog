@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'log_out', sign_up: 'register'}
   resources :calenders, except: [:show]
   get 'calender/:id', to: 'calenders#show', as: 'calender_show'
 
